@@ -1,0 +1,26 @@
+{
+    "training_params" : {
+        "batch":32,
+        "learning_rate":0.01,
+        "epochs":2
+    },
+
+    "model_params" : {
+        "num_classes":7,
+
+        "input_shape": {
+            "width": 224,
+            "height": 224,
+            "depth": 3
+        },
+
+        "model" : "Z:/Federated Learning Projects/federated-learning-framework/federated_app/configs/m.py",
+
+        "feature_extractor" : "mobilenetv2"
+        
+    },
+
+    "optimizer": {
+        "name": "SGD"
+    }
+}

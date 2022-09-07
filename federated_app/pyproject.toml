@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    "poetry==1.1.12",
+]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "licenta"
+version = "0.1.0"
+description = "federated-app"
+authors = ["Rares Patrascu"]
+
+[tool.poetry.dependencies]
+python = "3.9.5"
+flwr = "0.19.0"  # For development: { path = "../../", develop = true }
+tensorflow = "2.8.0"
+Flask = "^2.0.2"
+flake8 = "^4.0.1"
+opencv-python = "4.4.0.46"
+nptyping = "^1.4.4"
+torch = "^1.11.0"
+jsonargparse = "^4.7.0"
+matplotlib = "^3.5.2"
+
+[[tool.poetry.source]]
+name = 'pypi_'  # needed until python-poetry/poetry#3456 is resolved.
+url = 'https://pypi.org/simple'
+secondary = false

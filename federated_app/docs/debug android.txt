@@ -1,0 +1,19 @@
+ipconfig in cmd sa mi vad ip ul 
+
+layers:
+	-type Protobuf Array List (lista de ByteStringuri adica modelul head care a fost convertit in numpy cu weights to convert pe server)
+	 	versiunea fedavgandroid 
+	-4 LAYERE DE MODEL (2 weights 2 bias) fiecare  are marimea corespondenta cu numarul de parametrii 
+	-primeste exact bytestringul ala convertit cumva prin getTensorsList()
+
+newWeights:
+	-converteste bytestringurile alea intr-un byte buffer [marimea bytebufferului este harcodata=4 nr de layere]
+	-INTREBARE cum drq initializez modelul meu cu ByteBuffer ul asta de java.nio.HeapByteBuffer 
+	  sau cu lista de bytestrings in caz ca nu il mai convertesc la bytebuffer?
+	-INTREBARE cum salvez weightsurile dupa train intr-un ByteBuffer de genul ?
+
+
+Trying to write the getWeights method on android:
+	-problema: trebuie sa transmit inputs si outputs obligatoriu ptr semnatura extract 
+		:outputs
+ 

@@ -1,0 +1,35 @@
+
+
+    - o clasa de baza StrategyHelper ce contine parametrii de baza ai tuturor strategiilor intr-un dictionar
+    - o clasa Strategy      
+        -pe init primeste dictionarul din clasa anterioare
+        -o functie get_opt care creeaza strategia apelata
+        -functii care apeleaza fiecare strategie in parte 
+
+
+        ?? Fac un singur dictionar in strategy helper cu parametrii de baza 
+            sau 3 pentru fiecare strategie
+
+            # ? IN FELUL ASTA AS PUTEA SA SCOT INFORMATII DIN TRAINING PTR VIZUALIZAREA PE FLASK
+            import flwr as fl
+
+            def get_on_fit_config_fn() -> Callable[[int], Dict[str, str]]:
+                """Return a function which returns training configurations."""
+            
+                def fit_config(rnd: int) -> Dict[str, str]:
+                    """Return a configuration with static batch size and (local) epochs."""
+                    config = {
+                        "learning_rate": str(0.001),
+                        "batch_size": str(32),
+                    }
+                    return config
+            
+                return fit_config
+            
+            strategy = fl.server.strategy.FedAvg(
+                fraction_fit=0.1,
+                min_fit_clients=10,
+                min_available_clients=80,
+                on_fit_config_fn=get_on_fit_config_fn(),
+            )
+            fl.server.start_server(config={"num_rounds": 3}, strategy=strategy)

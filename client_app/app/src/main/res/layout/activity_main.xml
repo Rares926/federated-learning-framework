@@ -1,0 +1,242 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#BDBDBD">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        android:background="@drawable/custom_border"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5sp"
+                android:paddingTop="12dp"
+                android:text="                       Train"
+                android:textAlignment="center"
+                android:textColor="#343a40"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/dialog_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:background="@drawable/rounded_button"
+                android:text="HELP"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:textAlignment="center"
+                android:id="@+id/device_id_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Client Partition ID "
+                android:inputType="numberDecimal" />
+
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:textAlignment="center"
+                android:id="@+id/serverIP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Federated Learning Server IP"
+                android:inputType="phone" />
+
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:textAlignment="center"
+                android:id="@+id/serverPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Federated Learning Server Port"
+                android:inputType="numberDecimal" />
+
+
+
+        <Button
+            android:id="@+id/load_data"
+            android:layout_width="358dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/rounded_button_2"
+            android:onClick="loadData"
+            android:text="Load Data"
+             />
+
+        <LinearLayout
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="189dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:backgroundTint="#9DE1EA"
+                android:enabled="false"
+                android:onClick="connect"
+                android:text="Setup Connection Channel"
+               />
+
+            <Button
+                android:id="@+id/trainFederated"
+                android:layout_width="167dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:backgroundTint="#80ff80"
+                android:enabled="false"
+                android:onClick="runGRCP"
+                android:text="Train Federated!" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:layout_width="372dp"-->
+<!--        android:layout_height="4dp"-->
+<!--        android:background="@android:color/black"-->
+<!--        android:layout_gravity="center"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/custom_border_2"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="                       Inference"
+                android:textAlignment="center"
+                android:textColor="#343a40"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/dialog_btn_infer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:background="@drawable/rounded_button"
+                android:text="HELP"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/load_image"
+                android:layout_width="189dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:backgroundTint="#9DE1EA"
+                android:onClick="loadImage"
+                android:text="Load Image"
+               />
+
+            <Button
+                android:id="@+id/inference"
+                android:layout_width="167dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:backgroundTint="#80ff80"
+                android:enabled="false"
+                android:onClick="predict"
+                android:text="Predict" />
+        </LinearLayout>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="07dp"
+>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:background="@drawable/underline"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="Activity Log"
+        android:textAlignment="center"
+        android:textColor="#343a40"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+
+        android:id="@+id/grpc_response_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#D9D9D9"
+        android:gravity="bottom"
+        android:nestedScrollingEnabled="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbars="vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        android:verticalScrollbarPosition="defaultPosition" />
+
+</LinearLayout>
+
+</LinearLayout>

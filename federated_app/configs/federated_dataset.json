@@ -1,0 +1,34 @@
+{
+
+    "dataset_path":"Z:/Federated Learning Projects/federated-learning-framework/datasets/DATASET_LICENTA_SMALL",
+
+    "new_dataset_path":"Z:/Federated Learning Projects/federated-learning-framework/datasets/DATASET_LICENTA_SMALL_FEDERATED",
+    
+    "federated_factor":0.5,
+
+    "split_percentage":0.9,
+
+    "input_data":{
+
+        "input_shape": {
+            "width": 224,
+            "height": 224,
+            "depth": 3
+        },
+    
+        "input_format": {
+            "channels": "RGB",
+            "data_type": "FLOAT"
+        },
+        
+        "resize": {
+            "method": "CROP",
+            "params": {
+                "tl_ratio":0.25,
+                "br_ratio":0.25,
+                "resize_after_crop":"LETTERBOX"
+            }
+        }
+    }
+
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "981718920627",
+    "project_id": "cloud-tflite",
+    "storage_bucket": "cloud-tflite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981718920627:android:5e9a9e61fe8f17e83b2fc6",
+        "android_client_info": {
+          "package_name": "flwr.android_client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981718920627-c3g740vm35l6g66knpk2v1j9it9gq5gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOL-HKQ0stCq1WGFxFS6CgjVXNelc9dgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981718920627-c3g740vm35l6g66knpk2v1j9it9gq5gg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

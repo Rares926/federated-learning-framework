@@ -1,0 +1,47 @@
+STEPS:
+
+- vorbesc cu alex despre necesitatea a 5 modele de catre on device train ca sa stiu sa i explic lui sasu de ce sunt trimise 5 
+
+- aduc aplicatia de client la forma celei care merge partial (SOME INFO)
+
+	-Pana acum cea care merge se conecteaza la trainingul federativ poate descarca o portiune de dataset din datele incarcate din assets
+	 incarca modelul din assets.
+
+	-modelul e incarcat tot din assets dar momentan am creat o functionalitate clean ce produce 
+	 descarcarea si deziparea modelului necesar de pe linkul de flask si il plaseaza in downloads intr-un folder 
+	 Models-tflite unde se afla si zip ul cat si modelele dezipate
+
+	:din ce am vorbit cu bogdan am inteles ca acum trebuie sa suprascriem 2 functii din 
+	 api ul de la tensorflow  de mai jos __ si daca acesc lucru e posibil astfel vom realiza incarcarea modelului de pe server direct in instanta de TransferLearningModel
+	MAI USOR CREEZ CLASA MEA MODEL LOADER CU ACELEASI FUNCTII CA CEA ORIGINALA SI IN TFMW O APELEZ PE CEA PERSONALA 
+
+		https://github.com/tensorflow/examples/blob/master/lite/examples/model_personalization/android/transfer_api/src/main/java/org/tensorflow/lite/examples/transfer/api/TransferLearningModel.java
+		https://github.com/tensorflow/examples/blob/master/lite/examples/model_personalization/android/app/src/main/java/org/tensorflow/lite/examples/transfer/TransferLearningModelWrapper.java
+
+	:metoda care trebuie suprascrisa in mod principal e LoadMappedFile care se gaseste in linkul de mai jos 
+	 trebuie schimbata astfel incat sa faca load la fisiere din memoria externa din folderul meu si sa nu mai faca direct din assets
+
+		https://github.com/tensorflow/examples/blob/master/lite/examples/model_personalization/android/transfer_api/src/main/java/org/tensorflow/lite/examples/transfer/api/ModelLoader.java
+
+-verific daca serverele de flask si flower functioneaza in documentul nou
+	
+    ---->Momentan serverul de flower foloseste fedAvgAndroid 
+	-->incerc sa deriv clasa fedAvg simpla in fedAvgAndroid ca sa evit folosirea celei scrise in framework si verific daca functioneaza pe un train 
+	Pentru a intelege cum fac aceasta adaptare ma pot uit in repo ul de flower la diferentele dintre fedAvg si fedAvgAndroid(existent dar fara documentatie)
+	-->trebuie sa scriu servere si pentru restul strategiilor existente in flower ca sa pot face o comparatie (probabil sa fie necesar adaptarea acestora pentru functionalitatea pe android)
+    
+    ---->Vorbesc cu alex despre ce functionalitate am mai putea adauga la serverul de flask, ceva sa aibe sens de adaugat 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

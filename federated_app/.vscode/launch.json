@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+
+        {
+            "name": "convert_dataset",
+            "type": "python",
+            "request": "launch",
+            "module": "federated_app.federated_dataset.convertor.dataset_convertor",
+            "args": [
+                "--dataset_convertor_file",
+                "Z:/Federated Learning Projects/federated-learning-framework/federated_app/configs/federated_dataset_prezentare.json"
+            ]
+
+        },
+        {
+            "name": "run_server",
+            "type": "python",
+            "request": "launch",
+            "module": "federated_app.federated_server.server.server",
+            "args": [
+                "--server_configuration_file",
+                "Z:/Federated Learning Projects/federated-learning-framework/federated_app/configs/federated_server_prezentare.json"
+            ]
+
+        },
+        {
+            "name": "generate_model",
+            "type": "python",
+            "request": "launch",
+            "module": "federated_app.model_convertor.generate_model",
+            "args": [
+                "--model_generator_file",
+                "Z:/Federated Learning Projects/federated-learning-framework/federated_app/configs/generate_model_prezentare.json"
+            ]
+
+        }
+    ]
+}

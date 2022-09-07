@@ -1,0 +1,46 @@
+{
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=144",
+        "--ignore=E402,F841,F401,E302,E305",
+    ],
+    "better-comments.tags": [
+        {
+          "tag": "-",
+          "color": "#ffcc00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "tag": "?",
+          "color": "#00ffea",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "tag": "!",
+          "color": "#ff0028",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "tag": "*",
+          "color": "#76ff05",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": true,
+          "italic": false
+        }
+      ]
+}

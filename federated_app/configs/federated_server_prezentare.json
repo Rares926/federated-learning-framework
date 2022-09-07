@@ -1,0 +1,52 @@
+{
+    "server_address" : "[::]:8999",
+
+    "rounds"         : 3,
+
+    "centralized_test_dataset":"Z:/Federated Learning Projects/federated-learning-framework-saves/datasets/DATASET_PREZENTARE_FEDERATED",
+    "pb_model":"Z:/Federated Learning Projects/federated-learning-framework/federated_app/saved_model_new",
+    
+    "training_params" : {
+        "batch":32,
+        "learning_rate":0.001,
+        "epochs":10
+    },
+
+    "model_params" : {
+
+        "num_classes":6,
+
+        "input_shape": {
+            "width": 224,
+            "height": 224,
+            "depth": 3
+        },
+
+        "feature_extractor" : "mobilenetv2",
+        "model" : "Z:/Federated Learning Projects/federated-learning-framework/federated_app/configs/m.py"
+    },
+
+   
+    "strategy":{
+        "name": "FedAvg",
+        
+        "type": "android",
+
+        "client_info":{
+            "fraction_fit":1,
+            "fraction_eval":1,
+            "min_fit_clients":3,
+            "min_eval_clients":3,
+            "min_available_clients":3,
+            "accept_failures":"True"
+        },
+        "aggregation_params":{
+            "eta":0.01,
+            "eta_l":0.0316,
+            "beta_1":0.9,
+            "beta_2":0.99,
+            "tau":0.001
+        }
+    }
+}
+
